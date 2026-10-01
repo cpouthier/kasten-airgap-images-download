@@ -15,20 +15,20 @@ else
   SHA256='sha256sum'
 fi
 
-echo -e "\033[0;31m Enter the Veeam Kasten Helm chart version to download (leave empty for latest): \e[0m"
+echo -e "\033[0;31m Enter the Veeam Kasten Helm chart version to download (leave empty for latest): \033[0m"
 read chart_version < /dev/tty
 
-echo -e "\033[0;31m Enter the output directory for the chart and images (default: ./kasten-airgap): \e[0m"
+echo -e "\033[0;31m Enter the output directory for the chart and images (default: ./kasten-airgap): \033[0m"
 read output_dir < /dev/tty
 output_dir=${output_dir:-./kasten-airgap}
 
-echo -e "\033[0;31m Also push the images to a private registry? (y/N): \e[0m"
+echo -e "\033[0;31m Also push the images to a private registry? (y/N): \033[0m"
 read push_choice < /dev/tty
 push_choice=${push_choice:-N}
 
 target_registry=""
 if [[ "$push_choice" =~ ^[Yy]$ ]]; then
-  echo -e "\033[0;31m Enter the target private registry, e.g. myregistry.example.com/kasten: \e[0m"
+  echo -e "\033[0;31m Enter the target private registry, e.g. myregistry.example.com/kasten: \033[0m"
   read target_registry < /dev/tty
 fi
 

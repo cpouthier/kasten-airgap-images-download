@@ -15,7 +15,7 @@ else
   SHA256='sha256sum'
 fi
 
-echo -e "\033[0;31m Enter the directory where the Veeam Kasten images were pulled: \e[0m"
+echo -e "\033[0;31m Enter the directory where the Veeam Kasten images were pulled: \033[0m"
 read images_dir < /dev/tty
 
 if [[ ! -d "$images_dir" ]]; then
